@@ -1,1 +1,1 @@
-# simple-flask-login-page
+# just a simple login page using flask and dash. And we have some functionality to play with cookies (add defaults, add edited one using a form, see the cookies in the HTML page and/or delete the cookies - cookie management implemented both on dash and flask)
