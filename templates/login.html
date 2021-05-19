@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+  </head>
+  <body>
+  <section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <h3 class="title">Login</h3>
+          <div class="box">
+            <br>
+            <form action="" method="post">
+              <div class="field">
+                <input class="input is-small" type="text" placeholder="Username" name="username" value="{{
+                request.form.username }}" autofocus="">
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input is-small" type="password" placeholder="Password" name="password" value="{{
+                request.form.password }}">
+                </div>
+              </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Remember me
+                  </label>
+              </div>
+              <input class="button is-block is-info is-small is-fullwidth" type="submit" value="Login">
+            </form>
+          </div>
+      </div>
+
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+      {% for message in get_flashed_messages() %}
+        {{ message }}
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
